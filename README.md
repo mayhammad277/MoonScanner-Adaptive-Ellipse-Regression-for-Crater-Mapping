@@ -33,4 +33,3 @@ The adaptive inference logic successfully balanced the detection of minute surfa
 🤝 Contributing
 If you're interested in planetary defense, lunar geology, or geometric deep learning, feel free to fork this repo and submit a PR.
 
-"The moon is a cold mistress, but her geometry is perfect."
