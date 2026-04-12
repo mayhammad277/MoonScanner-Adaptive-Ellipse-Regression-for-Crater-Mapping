@@ -33,3 +33,17 @@ The adaptive inference logic successfully balanced the detection of minute surfa
 🤝 Contributing
 If you're interested in planetary defense, lunar geology, or geometric deep learning, feel free to fork this repo and submit a PR.
 
+
+![clahe_altitude01_longitude05_orientation07_light02](https://github.com/user-attachments/assets/8c8aa0eb-35f9-44d7-9176-71744de1bccb)
+
+<img width="2592" height="2048" alt="clahe_altitude01_longitude06_orientation04_light05" src="https://github.com/user-attachments/assets/931dd974-2e9d-48b2-af1e-2a5765737e76" />
+
+
+
+
+
+
+
+
+
+
