@@ -9,16 +9,16 @@ Unlike standard object detection that uses axis-aligned bounding boxes, this pro
 Heatmap-Based Center Regression. Instead of traditional anchor boxes, the model views the lunar surface as a probability field.
 Point Localization: The network predicts a Sigmoid-activated heatmap where intensity represents crater-center probability.Sub-pixel Offsets: To overcome the limitations of the feature map resolution ($160 \times 160$), a dedicated offset head predicts local adjustments, allowing for precise center placement on the original $2592 \times 2592$ images.
 
-2. Deep Learning Ellipse GeometryThe model's architecture branches into multiple regression heads to solve for the 5 parameters of an ellipse:Location: $(x, y)$ coordinates.Scale: Semimajor and Semiminor axes $(a, b)$.Orientation: Rotation angle $(\theta)$ in radians.
+Deep Learning Ellipse GeometryThe model's architecture branches into multiple regression heads to solve for the 5 parameters of an ellipse:Location: $(x, y)$ coordinates.Scale: Semimajor and Semiminor axes $(a, b)$.Orientation: Rotation angle $(\theta)$ in radians.
 
 
-3. Adaptive Scaling & Overlap Prevention. Standard linear scaling often fails in planetary science due to the power-law distribution of crater sizes. We implemented a Custom Inference Engine featuring:Non-Linear Scaling: A hybrid Log-Power Law formula that aggressively boosts the visibility of tiny craters while "braking" the growth of large ones to prevent them from swallowing neighboring data.Geometric NMS (Non-Maximum Suppression): A custom spatial filtering algorithm that evaluates the distance between centers relative to the predicted radii, eliminating redundant false positives in crowded clusters.
+Adaptive Scaling & Overlap Prevention. Standard linear scaling often fails in planetary science due to the power-law distribution of crater sizes. We implemented a Custom Inference Engine featuring:Non-Linear Scaling: A hybrid Log-Power Law formula that aggressively boosts the visibility of tiny craters while "braking" the growth of large ones to prevent them from swallowing neighboring data.Geometric NMS (Non-Maximum Suppression): A custom spatial filtering algorithm that evaluates the distance between centers relative to the predicted radii, eliminating redundant false positives in crowded clusters.
 
 
 
-7. IoU-Optimized Circularity: Automated aspect-ratio clamping ($1.25:1$) to maximize Intersection over Union (IoU) scores, ensuring geological realism.🛠️ Performance TuningThrough iterative refinement of the inference logic, the pipeline achieved a significant score improvement by focusing on:Reducing False Positives: Raising heatmap sensitivity thresholds in shadow-heavy regions.Size Calibration: Tuning the floor (minimum size) to $32\text{px}$ to align with Mahanti ground-truth standards.Stability: Forcing rotation-neutrality for nearly circular craters to reduce noise in the final submission.
+IoU-Optimized Circularity: Automated aspect-ratio clamping ($1.25:1$) to maximize Intersection over Union (IoU) scores, ensuring geological realism.🛠️ Performance TuningThrough iterative refinement of the inference logic, the pipeline achieved a significant score improvement by focusing on:Reducing False Positives: Raising heatmap sensitivity thresholds in shadow-heavy regions.Size Calibration: Tuning the floor (minimum size) to $32\text{px}$ to align with Mahanti ground-truth standards.Stability: Forcing rotation-neutrality for nearly circular craters to reduce noise in the final submission.
   
-8.
+
 ├── inference.py        # Optimized prediction engine with Adaptive Scaling
 ├── model/              # Neural network architecture (Heads for axes, rot, hm)
 ├── utils/              # CLAHE enhancement and geometric conversion tools
