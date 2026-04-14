@@ -1,6 +1,11 @@
 # MoonScanner-.-
 Deep learning-based lunar topography analysis. This project implements a precise ellipse-regression model calibrated to high-resolution satellite imagery, utilizing adaptive scaling to accurately map craters of all sizes while preventing geometric overlaps.
 -------------------------------------------------------------------------------------------------------------
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mayhammad227/space-image-restoration)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.10+-ee4c2c.svg)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 📌 Overview: Lunar-GeoNet is a high-precision computer vision pipeline designed to automate the detection and measurement of lunar craters from high-resolution satellite imagery (Mahanti Dataset).
 
