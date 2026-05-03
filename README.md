@@ -50,11 +50,20 @@ The adaptive inference logic successfully balanced the detection of minute surfa
 
 
 ![clahe_altitude01_longitude05_orientation07_light02](https://github.com/user-attachments/assets/8c8aa0eb-35f9-44d7-9176-71744de1bccb)
-
+<br>
+<br>
+<br>
+<br>
 <img width="2592" height="2048" alt="clahe_altitude01_longitude06_orientation04_light05" src="https://github.com/user-attachments/assets/931dd974-2e9d-48b2-af1e-2a5765737e76" />
-
+<br>
+<br>
+<br>
+<br>
 <img width="2592" height="2048" alt="view_altitude01_longitude05_orientation02_light02" src="https://github.com/user-attachments/assets/dce2307a-24db-4e30-b647-ceea538a6b06" />
-
+<br>
+<br>
+<br>
+<br>
 ![Uploading view_altitude01_longitude06_orientation04_light01.png…]()
 
 
